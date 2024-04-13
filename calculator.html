@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+        input{
+            width: 15vw;
+            margin: 3vw 0px;
+        }
+        select{
+            font-size: 2vw;
+        
+        }
+        button{
+            margin: 2vw;
+            font-size: 2vw;
+        }
+    </style>
+
+    <script>
+        function calc(){
+            // let num1 = parseInt( document.getElementById("num1").value);
+            // let num2 =  parseInt( document.getElementById("num1").value);
+            // let selectVal = document.getElementById('select').value;
+            let result = document.getElementById('result');
+           
+
+            // if(num1 == ""  || num2 == ""){
+            //         alert('Enter a valid number');
+            // }
+            // else{
+            //     switch (selectVal) {
+        
+            //     case "+":
+            //          result.innerHTML = num1 + num2;
+
+            //         break;
+
+            //     case "-":
+            //         result.innerHTML = num1 - num2;
+            //         break;
+                  
+            //     case "*":
+            //         result.innerHTML = num1 * num2;
+            //         break;
+
+            //     case "/":
+            //         result.innerHTML = num1 / num2;
+            //         break;
+
+            
+            //     default:
+            //         alert("Enter operation to perfrom");
+            //         break;
+
+
+            // }
+            // }
+           let inputVal = document.getElementById('input').value;
+           let inputLen = inputVal.length;
+           let i;
+           for (i = 0; i < inputLen; i++){
+        
+            if(inputVal[i] == "+" || inputVal[i] == "-" || inputVal[i] == "*" || inputVal[i] == "/"){
+                   let num1 = parseInt(inputVal.slice(0,i));
+                   let num2 = parseInt(inputVal.slice(i+1));
+                   let operation = inputVal[i];
+                   console.log(num1);
+                   console.log(operation);
+                   console.log(num2);
+
+          switch (operation) {
+        
+            case "+":
+                 result.innerHTML = num1 + num2;
+
+                break;
+
+            case "-":
+                result.innerHTML = num1 - num2;
+                break;
+              
+            case "*":
+                result.innerHTML = num1 * num2;
+                break;
+
+            case "/":
+                result.innerHTML = num1 / num2;
+                break;
+
+        
+            default:
+            alert("Enter operation to perfrom");
+
+                break;
+
+
+        }
+                   
+     }
+            
+            
+           }
+
+        }
+
+    </script>
+</head>
+<body>
+        
+         <div class="main">
+            <!-- <input type="text" id="num1">
+            <input type="text" id="num2">
+            <select name="" id="select">
+                <option value="">Enter operation</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select> -->
+            <input type="text" id="input">
+            <button id="btn" onclick="calc()">Enter</button>
+                <p>Calculation is: <span id="result"></span></p> 
+        </div> 
+</body>
+</html>

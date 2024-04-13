@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>check number is pelendrome or not</h1>
+    <input type="text" id="inputid">
+    <button id="btn" onclick="check()">ENter</button>
+
+    <h1 id="result"></h1>
+
+    <script defer>
+        function check() {
+            let inputVal = document.getElementById('inputid').value;
+            let result = document.getElementById('result');
+            let reverseNum = "";
+            let i , j;
+
+            for(i = inputVal.length -1; i >= 0; i--){
+
+                reverseNum = reverseNum + inputVal[i];
+
+            }
+            if (inputVal == reverseNum) {
+                result.innerHTML = inputVal + "is pelendrome";
+            }
+            else{
+                result.innerHTML = inputVal + "is not pelendrome";
+            }
+        }
+    </script>
+</body>
+</html>

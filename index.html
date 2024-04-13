@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            .main{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            p{
+                font-size: 2vw;
+
+            }
+    </style>
+    <script>
+        let count = 0;
+        let total = 0;
+        let i = 0;
+        let neg;
+        let flag = false;
+        
+            function change(){
+                let image = document.getElementById('ima');
+                let p = document.getElementById('clicks');
+
+
+
+                        if (count == total) {
+                        if(total == 0){
+                            neg = true;
+                        }
+                        else if(total == 10){
+                            neg = false;
+                            alert("you have reached limit");
+                        }
+                        if(neg){
+                            total++;
+                        }
+                        else{
+                            total--;
+                        }
+                        count = 0;
+                        i++;
+                        if(i % 2 == 1){
+                            flag = true;
+                        }
+                        else{
+                            flag = false;
+                        }
+                        
+                        }      
+                                 
+                     else {
+                        count++;
+                        
+                     }
+                     p.innerHTML = "your total : " + total + " " + "your count : " + count;
+
+
+                                  if(flag){
+                                        image.src = "bulb-on.jpg";
+                                   }
+                                  else{
+                                       image.src = "bulb-off.jpg";
+                                        
+                                     }
+                        
+                     
+
+         }
+                    
+                  
+               
+            
+    </script>
+</head>
+<body>
+    <div class="main">
+    <img src="bulb-off.jpg" alt="" id="ima" class="off" onclick="change()">
+        <p id="clicks"></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top:5vw ;
+        }
+        .time-selector{
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top:5vw ;
+        }
+        select{
+            font-size: 2vw;
+            width: 14vw;
+            padding: 1vw 1px;
+            margin-left: 10vw;
+            margin-right: 10vw;
+
+        }
+        p{
+            text-align: center;
+            font-size: 2vw;
+        }
+        .time{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="main">
+        <select name="" id="select1" onchange="change()">
+
+        </select>
+        <select name="" id="min">
+        </select>
+       
+    </div>
+    <div class="time">
+        
+    <p style="margin-right: 3vw;">Hours : <span id="hourscon"></span></p>
+    <p>minutes : <span id="mincon"></span> </p>
+    </div>
+    <div class="time2">
+        <p id="am-pm"></p>
+    </div>
+
+    <div class="time-selector">
+
+        <select name="" id="time1"  >
+
+        </select>
+        <select name="" id="time2">
+        </select>
+
+    </div>
+
+<script src="time.js" defer></script>
+</body>
+</html>

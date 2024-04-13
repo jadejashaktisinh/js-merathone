@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            #btn{
+                font-size: 2vw;
+            }
+            #inputid{
+                height: 2vw ;
+            }
+    </style>
+    <script>
+                        function chnageColor() {
+                            let body = document.body;
+                            let colorVal = document.getElementById('inputid').value;
+                            body.style.background = colorVal;
+                         
+
+                        }
+                        
+    </script>
+</head>
+<body id="body">
+    <div>
+        
+    <input type="text" id="inputid">
+    <button id="btn" onclick="chnageColor()">Enter</button>
+    
+    </div>
+</body>
+</html>
